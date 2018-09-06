@@ -21,15 +21,14 @@ function renderButtons() {
 
 $("#airplaneButtons").on('click', function(){
 
-    var aircraft=$(this).attr("data-name")
-    var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&tag=airplane&rating=PG";
+    
+    var api_key= "3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&q=&limit=25&offset=0&rating=G&lang=en";
 
     $.ajax({
         url:queryURL,
         method: "GET"
     }).then(function(response){
-
-        console.log(response);
 
         var imgUrl=response.data.image_original_url;
 
@@ -37,13 +36,15 @@ $("#airplaneButtons").on('click', function(){
 
       // Setting the aircraftImage src attribute to imageUrl
         aircraftImage.attr("src", imgUrl);
-        aircraftImage.attr("alt", "aircraft image")
+        aircraftImage.attr("alt", "aircraft image");
 
         //Prepend the aircraftImage to the airplanes div
         $("#airplanes").prepend(aircraftImage);
 
     })
-})
+});
+
+
 
 $("#addAircraft").on("click", function(event){
 
@@ -57,7 +58,8 @@ $("#addAircraft").on("click", function(event){
     topics.push(aircraft);
 
     // //call the render button now to process the movie array
-    // renderButtons();
+    renderButtons();
 })
+
 
 renderButtons();
