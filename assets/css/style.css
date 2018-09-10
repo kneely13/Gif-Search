@@ -7,3 +7,7 @@ body {
 #airplane-form {
     float: right;
 }
+
+#airplanes {
+    float: left;
+}
