@@ -8,9 +8,11 @@ $(document).ready(function(){
         $("#airplaneButtons").empty()
    
         for(var i=0; i<topics.length; i++)
-            {
+        {
                 var $b = $("<button>");
                 var space=" ";
+               
+
                 $("#airplaneButtons").append($b).append(space)
                 //Add the class to the button
                 $b.addClass(".aircraft");
@@ -18,12 +20,12 @@ $(document).ready(function(){
                 $b.attr("data-name",topics[i]);
                 //Providing the buttons text with the value of the aircraft at index i
                 $b.text(topics[i]);
-
-                var aircraft = $("#airplane-input").val().trim();
-                topics.push(aircraft);
+                // var aircraft = $("#airplane-input").val().trim();
+                // topics.push(aircraft);
                 //This will add the button to my html under the div I named as an id of airplaneButtons
                 $("#airplaneButtons").on('click', showGifs);
-            }
+        }
+
     };
     
     
@@ -55,7 +57,7 @@ $(document).ready(function(){
                  
             };
         })
-    }
+    };
     
     
     
