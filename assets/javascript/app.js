@@ -11,23 +11,19 @@ $(document).ready(function(){
         {
                 var $b = $("<button>");
                 var space=" ";
-               
-
-                $("#airplaneButtons").append($b).append(space)
+                
                 //Add the class to the button
                 $b.addClass(".aircraft");
                 //Add a data attribute with the value of the aircraft at index i
                 $b.attr("data-name",topics[i]);
                 //Providing the buttons text with the value of the aircraft at index i
                 $b.text(topics[i]);
-                // var aircraft = $("#airplane-input").val().trim();
-                // topics.push(aircraft);
-                //This will add the button to my html under the div I named as an id of airplaneButtons
-                $("#airplaneButtons").on('click', showGifs);
-        }
 
+                $("#airplaneButtons").append($b).append(space);
+                //This will add the button to my html under the div I named as an id of airplaneButtons
+                ($b).on('click', showGifs);   
+        }    
     };
-    
     
     function showGifs() {
         $("#airplanes").empty();
@@ -72,8 +68,8 @@ $(document).ready(function(){
         //now the aircraft will now be added to our array of buttons
         topics.push(aircraft);
     
-        // //call the render button now to process the movie array
-        // renderButtons();
+         //call the render button now to process the array
+        renderButtons();
     })
     
     
