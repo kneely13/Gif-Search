@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var topics=["Cessna","F-14","Airbus A380-800"]
+    var topics=["Wright Flyer","Lockheed","Cessna","Learjet","Gulfstream","F-14","F-16","F-22","F-35","Bell Boeing V 22 Osprey","Boeing 737","Boeing 787", "Boeing 747","Boeing-777", "Airbus A380-800" ]
 
     function renderButtons() {
     
