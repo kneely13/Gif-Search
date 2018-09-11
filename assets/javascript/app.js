@@ -31,7 +31,7 @@ $(document).ready(function(){
     function showGifs() {
         $("#airplanes").empty();
         var gif =$(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ gif +"&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ gif +"&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
     
         $.ajax({
             url: queryURL,
