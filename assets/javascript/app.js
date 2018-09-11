@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var topics=["Cessna","F-14"]
+    var topics=["Cessna","737","F-14","Airbus A380-800" ]
 
     function renderButtons() {
     
@@ -21,14 +21,17 @@ $(document).ready(function(){
 
                 $("#airplaneButtons").append($b).append(space);
                 //This will add the button to my html under the div I named as an id of airplaneButtons
-                ($b).on('click', showGifs);   
+                $($b).on('click', showGifs);   
         }    
     };
+
+
+    
     
     function showGifs() {
         $("#airplanes").empty();
         var gif=$(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
     
         $.ajax({
             url:queryURL,
