@@ -1,7 +1,9 @@
 body {
     background-image: url("../images/background.jpg"); 
     background-size:cover;
-	background-repeat:no-repeat;
+    background-repeat:no-repeat;
+    padding-bottom: 7em;
+   
 }
 
 #airplane-form {
@@ -9,5 +11,8 @@ body {
 }
 
 #airplanes {
-    float: left;
+    float: center;
+}
+#img {
+display: inline;
 }

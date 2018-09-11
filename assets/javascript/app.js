@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var topics=["Cessna","737","F-14","Airbus A380-800" ]
+    var topics=["Cessna","F-14","Airbus A380-800"]
 
     function renderButtons() {
     
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
                 $("#airplaneButtons").append($b).append(space);
                 //This will add the button to my html under the div I named as an id of airplaneButtons
-                $($b).on('click', showGifs);   
+                $($b).on('click',showGifs);
         }    
     };
 
@@ -30,11 +30,11 @@ $(document).ready(function(){
     
     function showGifs() {
         $("#airplanes").empty();
-        var gif=$(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
+        var gif =$(this).attr("data-name");
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ gif +"&api_key=3CYKBkbY2Z6k94oEvOxFIYwZEMGDc2JV&limit=10&rating=G";
     
         $.ajax({
-            url:queryURL,
+            url: queryURL,
             method: "GET"
         }).then(function(response){
     
@@ -54,9 +54,9 @@ $(document).ready(function(){
                 aircraftImage.attr("data-animate", results[j].images.fixed_height_small.url);
                 // aircraftImage.attr("data-name", "still");
                  
-            };
+            }
         })
-    };
+    }
     
     
     
@@ -91,6 +91,6 @@ $(document).ready(function(){
           $(this).attr("src", $(this).attr("data-still"));
           $(this).attr("data-state", "still");
         }
-    });
+    })
 
 });
