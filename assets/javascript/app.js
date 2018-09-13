@@ -45,7 +45,7 @@ $(document).ready(function(){
                 var rating= results[j].rating;
                 console.log(rating);
                 var aircraftImage = $("<img>");
-                var showRating=$("<p>").text("Rating: " + rating);
+                var showRating=$("<h5>").text("Rating: " + rating);
                 // var imgUrl = results[j].images.fixed_height_still.url;
                 $("#airplanes").append(showRating);
                 $("#airplanes").append(aircraftImage);

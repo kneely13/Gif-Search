@@ -11,8 +11,12 @@ body {
 }
 
 #airplanes {
-    float: center;
+    width: 75%;
+    margin: 0, auto;
+    display: block;
+    float: left;
 }
-#img {
-display: inline;
+h5 {
+    max-width: 33%;
 }
+
